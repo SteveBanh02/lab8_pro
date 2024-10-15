@@ -1,0 +1,75 @@
+question 1
+
+public class ThreeSameBirthday{
+
+    public static void main(String[] args) {
+
+        int [] encountered = new int[365];
+
+        for(int i = 0; i < 365; i++){
+
+            int birthday = (int)(Math.random() * 365);
+            System.out.println("birthday " + birthday); 
+            encountered[birthday]++;
+
+            if ( encountered[birthday] == 3){
+                
+                System.out.println("it took " + ++i + " tries to find 3 of the same birthday");
+                return;
+            }
+        }
+        System.out.println("there is no 3 of the same birthdays");
+    }
+}
+
+
+question 2
+
+public class DifferentBirthdays{
+
+    public static void main(String[] args) {
+        
+        int [] encountered = new int[365];
+        int differentBday = 0;
+        
+        for(int i = 0; i < 365; i++){
+
+            int birthday = (int)(Math.random() * 365);
+            System.out.println("birthday " + birthday);
+
+            if (encountered[birthday] == 0){
+                differentBday++;
+            }
+            encountered[birthday]++;
+        }
+        System.out.println("there are " + differentBday + " people with different birthdays");
+    }
+}
+
+
+question 3
+
+public class AllNumberOfYear{
+
+    public static void main(String[] args) {
+        
+        int [] encountered = new int[365];
+        int differentBday = 0;
+        int differentPeople = 0;
+        
+        while(differentBday < 365){
+
+            
+            System.out.println("birthday " + birthday);
+
+            differentPeople++;
+
+            if (encountered[birthday] == 0){
+                differentBday++;
+            }
+            encountered[birthday]++;
+        }
+        System.out.println("it took " + differentPeople + " people to find all 365 days of different birthdays");
+    }
+}
+
